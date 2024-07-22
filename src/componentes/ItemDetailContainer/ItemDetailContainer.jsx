@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { cargarItemPorId } from "../cargarItems";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
+import './ItemDetailContainer.css'
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState(null);
@@ -15,7 +16,7 @@ const ItemDetailContainer = () => {
     }, [id])
 
     return (
-        <div>
+        <div className="detalle-item">
             {item && <ItemDetail item={item} />}
         </div>
     )}
