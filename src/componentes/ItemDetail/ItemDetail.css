@@ -1,0 +1,14 @@
+/* card del item unico */
+
+.contenedor-item {
+    border-color: lightblue;
+    border-radius: 10px;
+    border: 3px solid;
+    width: 500px;
+    height: 600px;
+    text-align: center;
+    margin-left: 100px;
+    img{
+        margin-top: 20px;
+    }
+}
