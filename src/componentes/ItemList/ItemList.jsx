@@ -5,17 +5,19 @@ const ItemList = ( {productos, encabezado} ) => {
   return(
     <div>        
         <h2>{encabezado}</h2>
+        <div className='contenedor-productos'>
         {
             productos.length > 0 && 
             productos.map((producto) => {
                 return (
-                    <div className='contenedor-productos'>
+                    <div>
                       <Item key={producto.id} producto={producto} />
                     </div>
                         
                 )
             })    
-        }                 
+        }       
+        </div>
     </div>
   ) 
 }
