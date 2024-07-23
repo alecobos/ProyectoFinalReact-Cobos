@@ -5,13 +5,14 @@ const ItemList = ( {productos, encabezado} ) => {
   return(
     <div>        
         <h2>{encabezado}</h2>
+        
         <div className='contenedor-productos'>
         {
             productos.length > 0 && 
             productos.map((producto) => {
                 return (
                     <div>
-                      <Item key={producto.id} producto={producto} />
+                      <Item producto={producto} key={producto.id} />
                     </div>
                         
                 )

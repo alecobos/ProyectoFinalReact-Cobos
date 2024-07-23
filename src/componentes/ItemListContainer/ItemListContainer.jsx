@@ -9,8 +9,7 @@ import { useParams } from "react-router-dom";
 const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
     const tipo = useParams().tipo
-
-    const [encabezado, setEncabezado] = useState("Productos");  
+    const [encabezado, setEncabezado] = useState("Productos"); 
 
     useEffect(() => {
         cargarItems()
@@ -27,8 +26,10 @@ const ItemListContainer = () => {
 
     }, [tipo])
 
+
     return (
         <div>
+            {/* <input id="input" type="text" placeholder='Busqueda' className='form-control w-25' /> */}
             <ItemList productos= {productos} encabezado={encabezado} />
         </div>        
     )
