@@ -15,8 +15,9 @@ export const cargarItemPorId = (id) => {
     return new Promise((resolve, reject) => {
         const prod = data.find((el) => el.id === id);
         if (prod) {
-            resolve(prod)
-        } else {
+            setTimeout( () => {
+                resolve(prod);
+        }, 300)} else {
             reject({
                 error: "no se pudo encontrar el producto"
             })
