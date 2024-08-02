@@ -4,7 +4,7 @@
         "nombre":"Camiseta Titular",        
         "tipo":"camiseta", 
         "precio":45000, 
-        "stock":100, 
+        "stock":5, 
         "descripcion":"Camiseta Titular",
         "img":"../src/data/assets/001.png"
     },
@@ -13,7 +13,7 @@
         "nombre":"Pantalon Titular", 
         "tipo":"pantalon", 
         "precio":20000, 
-        "stock":100, 
+        "stock":10, 
         "descripcion":"Pantalón Titular",
         "img":"../src/data/assets/002.png"
     },
@@ -22,7 +22,7 @@
         "nombre":"Camiseta Suplente", 
         "tipo":"camiseta", 
         "precio":45000, 
-        "stock":50, 
+        "stock":8, 
         "descripcion":"Camiseta Suplente",
         "img":"../src/data/assets/003.png"
     },
@@ -31,7 +31,7 @@
         "nombre":"Pantalon Suplente", 
         "tipo":"pantalon", 
         "precio":20000, 
-        "stock":30, 
+        "stock":12, 
         "descripcion":"Pantalón Suplente",
         "img":"../src/data/assets/004.png"
     },
@@ -40,7 +40,7 @@
         "nombre":"Camiseta Entrenamiento", 
         "tipo":"camiseta", 
         "precio":18000, 
-        "stock":40, 
+        "stock":4, 
         "descripcion":"Camiseta de Entrenamiento Azul",
         "img":"../src/data/assets/005.png"
     },
@@ -67,7 +67,7 @@
         "nombre":"Gorra", 
         "tipo":"accesorios", 
         "precio":12000, 
-        "stock":15, 
+        "stock":10, 
         "descripcion":"Gorra Celeste",
         "img":"../src/data/assets/008.png"
     },
@@ -76,7 +76,7 @@
         "nombre":"Buzo con capucha", 
         "tipo":"accesorios", 
         "precio":25000, 
-        "stock":15, 
+        "stock":11, 
         "descripcion":"Buzo con capucha blanco",
         "img":"../src/data/assets/009.png"
     },
@@ -85,8 +85,17 @@
         "nombre":"Set Matero", 
         "tipo":"accesorios", 
         "precio":42000, 
-        "stock":15, 
+        "stock":11, 
         "descripcion":"Termo + mate",
         "img":"../src/data/assets/010.png"
+    },
+    {
+        "id":11, 
+        "nombre":"Mochila", 
+        "tipo":"accesorios", 
+        "precio":15000, 
+        "stock":5, 
+        "descripcion":"Mochila azul",
+        "img":"../src/data/assets/011.png"
     }
 ]
