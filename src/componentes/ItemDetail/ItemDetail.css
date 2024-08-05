@@ -1,16 +1,17 @@
 /* card del item unico */
-/* 
+
 .contenedor-item {
-    border-color: lightblue;
+    align-items: center;
+    border-color: red;
     border-radius: 10px;
-    border: 3px solid;
+    border: 3px solid lightskyblue;
     width: 500px;
-    height: 600px;
+    height: 650px;
     text-align: center;
-    margin-left: 100px;
+    margin-left: 0px;
     img{
         margin-top: 20px;
     }
-} */
+} 
 
 
