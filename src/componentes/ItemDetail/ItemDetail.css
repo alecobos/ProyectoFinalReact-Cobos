@@ -1,16 +1,23 @@
 /* card del item unico */
 
 .contenedor-item {
+    display:block;
     align-items: center;
     border-color: red;
     border-radius: 10px;
     border: 3px solid lightskyblue;
-    width: 500px;
-    height: 650px;
+    width: 400px;
+    height: 600px;
     text-align: center;
     margin-left: 0px;
-    img{
+    .img{
         margin-top: 20px;
+        width: 230px;
+        height: 230px;
+    }
+    .item-contador{
+        align-items: center;
+        text-align: center;
     }
 } 
 

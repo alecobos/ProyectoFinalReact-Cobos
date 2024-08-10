@@ -15,10 +15,11 @@ const NavBar = () => {
                     <li className="lista"><Link to="/productos/pantalon">Pantalones</Link></li>
                     <li className="lista"><Link to="/productos/campera">Camperas</Link></li>
                     <li className="lista"><Link to="/productos/accesorios">Accesorios</Link></li>
-                    
+                    <li className="lista"><Link to="/contacto">Contacto</Link></li>
+                    <CarritoWidget/>
                     
                 </ul>
-                <CarritoWidget/>
+                
             </div>
         </nav>
     )
