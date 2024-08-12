@@ -1,37 +1,41 @@
 import { useEffect, useState } from "react";
-import cargarItems from "../cargarItems";
 import ItemList from "../ItemList/ItemList";
 import './ItemListContainer.css'
 import { useParams } from "react-router-dom";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../baseDatos/config";
 
 
 
 const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
-    const tipo = useParams().tipo
-    const [encabezado, setEncabezado] = useState("Productos"); 
+    const tipo = useParams().tipo;
+    const [encabezado, setEncabezado] = useState("Productos");
 
     useEffect(() => {
-        cargarItems()
-            .then((response) => {
-                if (tipo){
-                    setProductos( response.filter((prod) => prod.tipo === tipo) );
-                    setEncabezado(tipo);
-                } else{
-                    setProductos(response);
-                    setEncabezado("Productos")
-                }
+
+        const productosRef = collection(db, "productos");
+
+        const q = tipo ? query(productosRef, where("tipo", "==", tipo)): productosRef;
+
+        getDocs(q)
+            .then((resp) => {
+
+                setProductos(
+                    resp.docs.map((doc) => {
+                        return { ...doc.data(), id: doc.id }
+                    })
+                )
             })
-            .catch(err => console.error(err))
+
 
     }, [tipo])
 
 
     return (
         <div>
-            {/* <input id="input" type="text" placeholder='Busqueda' className='form-control w-25' /> */}
-            <ItemList productos= {productos} encabezado={encabezado} />
-        </div>        
+            <ItemList productos={productos} encabezado={encabezado} />
+        </div>
     )
 }
 
