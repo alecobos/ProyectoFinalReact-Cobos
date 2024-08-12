@@ -83,3 +83,8 @@ button:focus-visible {
   display: flex;
   flex-wrap: wrap;
 }
+
+.logo {
+  width: 250px;
+  height: 85 px;
+}

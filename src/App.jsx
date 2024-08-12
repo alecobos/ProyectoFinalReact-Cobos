@@ -7,6 +7,7 @@ import NotFound from './componentes/NotFound/NotFound';
 import { CartProvider } from './context/CartContext';
 import Contacto from './componentes/Contacto/Contacto';
 import Carrito from './componentes/Carrito/Carrito';
+import FinalizarCompra from './componentes/FinalizarCompra/FinalizarCompra';
 
 
 
@@ -25,8 +26,9 @@ function App() {
             <Route path="/productos" element={<ItemListContainer />} />
             <Route path="/item/:id" element={<ItemDetailContainer />} />
             <Route path="/productos/:tipo" element={<ItemListContainer />} />
-            <Route path="/contacto" element={<Contacto />} />
+            {/* <Route path="/contacto" element={<Contacto />} /> */}
             <Route path="/carrito" element={<Carrito />} />
+            <Route path="/finalizarcompra" element={<FinalizarCompra />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
 

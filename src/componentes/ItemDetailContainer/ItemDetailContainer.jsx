@@ -25,8 +25,3 @@ const ItemDetailContainer = () => {
     )}
 export default ItemDetailContainer
 
-
-// cargarItemPorId(Number(id))
-// .then((response) => {
-//     setItem(response);
-// })
