@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react"
+import Swal from "sweetalert2";
 
 
 export const CartContext = createContext();
@@ -23,10 +24,29 @@ export const CartProvider = ({ children }) => {
             nuevoCarrito.push(itemNuevo)
             // console.log("el producto se agregó al carrito")
         }
+        
         setCarrito(nuevoCarrito)
 
+        Swal.fire({
+            title: "Productos agregados",
+            text: `Se agrego correctamente al carrito`,
+            icon: "success"
+          });
         // console.log(nuevoCarrito)
     }
+
+    const eliminarCarrito = (id) => {
+        
+        const nuevoCarrito = carrito.filter(prod => prod.id !== id);
+        setCarrito(nuevoCarrito);
+        localStorage.setItem('carrito', JSON.stringify(nuevoCarrito));
+
+        // console.log(id)
+
+
+    }
+
+
 
     const cantidadCarrito = () => {
         return carrito.reduce((acum, prod) => acum + prod.cantidad, 0);
@@ -50,7 +70,8 @@ export const CartProvider = ({ children }) => {
             agregarAlCarrito, 
             cantidadCarrito, 
             totalCarrito, 
-            vaciarCarrito 
+            vaciarCarrito,
+            eliminarCarrito 
         }}>
             {children}
         </CartContext.Provider>

@@ -9,8 +9,10 @@ import { db } from "../../baseDatos/config";
 
 const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
-    const tipo = useParams().tipo;
+    
     const [encabezado, setEncabezado] = useState("Productos");
+
+    const tipo = useParams().tipo;
 
     useEffect(() => {
 
@@ -33,7 +35,7 @@ const ItemListContainer = () => {
 
 
     return (
-        <div>
+        <div className="contenedor-productos">
             <ItemList productos={productos} encabezado={encabezado} />
         </div>
     )

@@ -37,10 +37,7 @@ const FinalizarCompra = () => {
           }).then(function() {
             window.location = "/productos";
         });
-        // <div>
-        //     <h1>Muchas gracias por su compra</h1>
-        //     <p>Tu número de pedido es: {pedidoId}</p>
-        // </div>
+
     }
 
   return (
