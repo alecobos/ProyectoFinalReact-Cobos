@@ -1,11 +1,12 @@
 .item-count {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
 }
 
-.item-count button {
+/* .item-count button {
     background-color: lightskyblue;
     border: 0;
     width: 1rem;
@@ -20,12 +21,17 @@
     text-align: center;
     line-height: 1;
     border: 2px solid lightskyblue;
+} */
+
+.item-count p {
+    align-items:normal;
+    vertical-align: middle;
 }
 
 .item-count button, .agregar-al-carrito, .enviar {
     background-color: lightskyblue;
     border: 0;
-    width: 2rem;
+    width: 1rem;
     height: 2rem;
     color: white;
     border-radius: .5rem;
@@ -50,5 +56,5 @@
     width: auto;
     height: auto;
     margin-top: 1rem;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
