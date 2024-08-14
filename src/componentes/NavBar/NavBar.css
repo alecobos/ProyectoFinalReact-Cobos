@@ -1,12 +1,16 @@
 .lista{
     list-style: none;
     display: inline;
+    align-items: center;
+    text-align: center;
     padding: 20px;
+    
 }
 
 .izquierda{
-    text-align: start;
+    text-align: center;
+
     .ul{
-        padding-left: 200px;
+        padding-left: 300px;
     }
 }

@@ -11,6 +11,7 @@
     margin: 10px;
     font-family: 'Montserrat', sans-serif;
     padding-top: 10px;
+    transition-duration: 0.2s;
     img{
         height: 120px;
         width: 120px;
@@ -19,11 +20,26 @@
         border-bottom-right-radius: 20%;
     }
     .ver-mas{
-        background-color: white;
+        /* background-color: white; */
         color: black;
-        border-radius: 3px;
+        border-radius: 8px;
         padding: 5px;
+        border: 1px solid transparent;
+        transition-duration: 0.5s;
     }
+
+    .ver-mas:hover{
+        /* background-color: white; */
+        color: white;
+        border-radius: 8px;
+        padding: 5px;
+        border: 1px solid white;
+        transform: scale(1.05);
+    }
+}
+
+.card-productos:hover {
+    transform: scale(1.02);
 }
 
 /* .columna-productos {
