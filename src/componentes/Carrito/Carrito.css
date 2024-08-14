@@ -15,7 +15,7 @@
     
 }
 
-.btn-borrar {
+.btn-borrar, .btn-finalizar {
     background-color: lightskyblue;
     color: white;
     font-size: smaller;
@@ -29,13 +29,20 @@
     border: 2px solid lightskyblue;
     display: block;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: auto; 
+    height: 3rem;
+    padding: 0.6em 1.2em;
+    font-weight: 500;
+    font-family: inherit;
+    transition: border-color 0.25s;
+    
 }
 
-.btn-borrar:hover {
+.btn-borrar:hover, .btn-finalizar:hover {
     background-color: white;
     color: black;
     border-color: lightskyblue;
+    
 }
 
 .final-compra {

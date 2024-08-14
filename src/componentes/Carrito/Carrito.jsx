@@ -33,7 +33,7 @@ const Carrito = () => {
                 <div className='final-compra'>
                     <h2>Precio total $ {totalCarrito()}</h2>
                     <button onClick={handleVaciar}>Vaciar carrito</button>
-                    <Link to="/finalizarcompra">Finalizar Compra</Link>
+                    <Link to="/finalizarcompra" className='btn-finalizar'>COMPRAR</Link>
                 </div>
                 :
                 

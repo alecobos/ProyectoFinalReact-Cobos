@@ -9,7 +9,6 @@ const carritoInicial = JSON.parse(localStorage.getItem("carrito")) || [];
 
 export const CartProvider = ({ children }) => {
     const [carrito, setCarrito] = useState(carritoInicial);
-    // const [carrito, setCarrito] = useState([]);
 
     const agregarAlCarrito = (item, cantidad) => {
         const itemNuevo = { ...item, cantidad };
@@ -19,36 +18,31 @@ export const CartProvider = ({ children }) => {
 
         if (incluidoCarrito) {
             incluidoCarrito.cantidad += cantidad;
-            // console.log("el producto ya se encuentra en el carrito")
         } else {
             nuevoCarrito.push(itemNuevo)
-            // console.log("el producto se agregó al carrito")
         }
-        
+
         setCarrito(nuevoCarrito)
 
         Swal.fire({
             title: "Productos agregados",
             text: `Se agrego correctamente al carrito`,
             icon: "success"
-          });
-        // console.log(nuevoCarrito)
+        });
     }
 
     const eliminarCarrito = (id) => {
-        
+
         const nuevoCarrito = carrito.filter(prod => prod.id !== id);
         setCarrito(nuevoCarrito);
         localStorage.setItem('carrito', JSON.stringify(nuevoCarrito));
-
-        // console.log(id)
-
 
     }
 
 
 
     const cantidadCarrito = () => {
+        
         return carrito.reduce((acum, prod) => acum + prod.cantidad, 0);
     }
 
@@ -65,13 +59,13 @@ export const CartProvider = ({ children }) => {
     }, [carrito])
 
     return (
-        <CartContext.Provider value={{ 
-            carrito, 
-            agregarAlCarrito, 
-            cantidadCarrito, 
-            totalCarrito, 
+        <CartContext.Provider value={{
+            carrito,
+            agregarAlCarrito,
+            cantidadCarrito,
+            totalCarrito,
             vaciarCarrito,
-            eliminarCarrito 
+            eliminarCarrito
         }}>
             {children}
         </CartContext.Provider>

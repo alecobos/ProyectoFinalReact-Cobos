@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from "../../baseDatos/config";
 import Swal from 'sweetalert2';
+import './FinalizarCompra.css'
 
 const FinalizarCompra = () => {
 
@@ -44,13 +45,13 @@ const FinalizarCompra = () => {
 
     <div className="container">
         <h1>Finalizar Compra</h1>
-        <form onSubmit={handleSubmit(comprar)}>
+        <form onSubmit={handleSubmit(comprar)}  className="container-form">
 
-            <input type="text" placeholder="Ingrese su nombre" {...register("nombre")} />
-            <input type="email" placeholder="Ingrese su e-mail" {...register("email")} />
-            <input type="phone" placeholder="Ingrese su teléfono" {...register("telefono")} />
+            <input type="text" placeholder="Ingrese su nombre" {...register("nombre")} className='input' />
+            <input type="email" placeholder="Ingrese su e-mail" {...register("email")} className='input' />
+            <input type="phone" placeholder="Ingrese su teléfono" {...register("telefono")} className='input' />
 
-            <button className="enviar" type="submit">Comprar</button>
+            <button className="btn-enviar" type="submit">Comprar</button>
 
         </form>
     </div>
